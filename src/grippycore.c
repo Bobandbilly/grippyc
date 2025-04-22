@@ -47,7 +47,7 @@ int divide(int dno1, int dno2) {
 
     return dno1 / dno2;
 }
-
+/*
 bool fileopen(char *filename, int mode) {
     FILE *file = fopen(filename, mode); // rw or r or w
     if (file == NULL) {
@@ -80,3 +80,4 @@ bool filedelete(char *filename) {
     }
     return true;
 }
+    */
