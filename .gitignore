@@ -1,2 +1,6 @@
 .vscode
 build/
+*.so.6
+*.so
+*.o
+**/build/
