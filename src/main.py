@@ -20,6 +20,7 @@ if len(sys.argv) != 3:
 def check_libs_exist():
     os.path.exists('/usr/bin/cc')
     os.path.exists('/usr/include/grippycore.h')
+    os.path.exists('/usr/include/grippyfile.h')
 
 
 if os.path.exists(sourcein):
