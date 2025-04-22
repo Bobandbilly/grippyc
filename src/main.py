@@ -5,9 +5,9 @@ import subprocess
 tsscript = sys.argv[0]
 
 
-# We need to get the first argument and assign it to the variable 'sourcein'
+
 sourcein = sys.argv[1]
-# We need to get the second argument and assign it to the variable 'binout'
+
 binout = sys.argv[2]
 
 

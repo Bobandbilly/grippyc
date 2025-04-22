@@ -1,6 +1,8 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <stdbool.h>
+#include <stdio.h>
+#include <fcntl.h>
 
 #include "grippycore.h"
 
@@ -46,3 +48,35 @@ int divide(int dno1, int dno2) {
     return dno1 / dno2;
 }
 
+bool fileopen(char *filename, int mode) {
+    FILE *file = fopen(filename, mode); // rw or r or w
+    if (file == NULL) {
+        return false;
+    }
+    return true;
+}
+
+bool fileclose(int fd) {
+    if (close(fd) == -1) {
+        return false;
+    }
+    return true;
+}
+bool fileread(int fd, char *buffer, int size) {
+    if (read(fd, buffer, size) == -1) {
+        return false;
+    }
+    return true;
+}
+bool filewrite(int fd, char *buffer, int size) {
+    if (write(fd, buffer, size) == -1) {
+        return false;
+    }
+    return true;
+}
+bool filedelete(char *filename) {
+    if (remove(filename) == -1) {
+        return false;
+    }
+    return true;
+}
